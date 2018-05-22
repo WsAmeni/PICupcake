@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="538.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoutiqueController">
+   <children>
+      <TableView fx:id="boutiq_TV" layoutX="322.0" onMouseClicked="#showOnClick" prefHeight="552.0" prefWidth="411.0">
+        <columns>
+        
+          <TableColumn fx:id="lat" prefWidth="140.0" text="Latitude" />
+            <TableColumn fx:id="longi" prefWidth="127.0" text="Longitude" />
+            <TableColumn fx:id="num" prefWidth="143.0" text="Numero" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="-3.0" prefHeight="552.0" prefWidth="321.0">
+         <children>
+            <Label fx:id="id_b" layoutX="29.0" layoutY="48.0" prefHeight="30.0" prefWidth="192.0" text="Mes Boutiques" textFill="#e15074">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="numero" layoutX="75.0" layoutY="208.0" text="Numero" />
+            <TextField fx:id="numTF" layoutX="146.0" layoutY="204.0" />
+            <Button fx:id="id_aj" layoutX="161.0" layoutY="366.0" mnemonicParsing="false" onAction="#ajouter_boutique" text="Ajouter" />
+            <Button fx:id="supp" layoutX="231.0" layoutY="366.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+            <Button fx:id="id_save" layoutX="70.0" layoutY="366.0" mnemonicParsing="false" onAction="#Enregistrer" text="Enregistrer" />
+            <TextField fx:id="latit" layoutX="146.0" layoutY="237.0" />
+            <TextField fx:id="longit" layoutX="146.0" layoutY="278.0" />
+            <Label fx:id="lati" layoutX="75.0" layoutY="241.0" text="Latitude" />
+            <Label fx:id="longitu" layoutX="70.0" layoutY="282.0" text="Longitude" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

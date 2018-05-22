@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ComptCController">
+   <children>
+      <ImageView fitHeight="734.0" fitWidth="1400.0" opacity="0.5" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/Pattern-White-Sand-background-patterns-pattern-wallpapers-1600x1200.jpg" />
+         </image>
+      </ImageView>
+    <AnchorPane fx:id="paneData" layoutX="284.0" prefHeight="1000.0" prefWidth="1116.0" style="-fx-background-color: transparent;" />
+      <ListView fx:id="listMenu" editable="true" fixedCellSize="0.0" minHeight="500.0" minWidth="200.0" onMouseClicked="#aksiKlikListMenu" prefHeight="503.0" prefWidth="282.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" stylesheets="@../css/listvcl_1.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="108.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RecettesController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1367.0" layoutX="14.0" layoutY="14.0" opacity="0.5" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-27.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/Pattern-White-Sand-background-patterns-pattern-wallpapers-1600x1200.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="192.0" fitWidth="116.0" layoutY="574.0" opacity="0.81" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <image>
+            <Image url="@../img/586ab2451fdce414493f510e.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="9.0" layoutY="57.0" onMouseClicked="#selectrec" prefHeight="562.0" prefWidth="284.0" style="-fx-background-color: transparent;" stylesheets="@../css/css.css" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="57.0">
+        <columns>
+          <TableColumn fx:id="col" prefWidth="263.0" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="ancr" layoutX="257.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1048.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <TextArea fx:id="brief" editable="false" layoutX="490.0" layoutY="60.0" prefHeight="65.0" prefWidth="448.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="60.0" />
+            <ImageView fx:id="img1" fitHeight="272.0" fitWidth="488.0" layoutX="12.0" layoutY="28.0" pickOnBounds="true" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="548.0" AnchorPane.topAnchor="28.0" />
+            <TextArea fx:id="ingred" editable="false" layoutX="490.0" layoutY="160.0" prefHeight="143.0" prefWidth="448.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="160.0" />
+            <TextArea fx:id="descript" editable="false" layoutX="17.0" layoutY="394.0" prefHeight="257.0" prefWidth="911.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="82.0" />
+            <Label fx:id="labtitre" layoutX="515.0" layoutY="28.0" prefHeight="35.0" prefWidth="352.0" textFill="#dd7a7a" AnchorPane.rightAnchor="181.0" AnchorPane.topAnchor="28.0">
+               <font>
+                  <Font name="Forte" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l1" layoutX="490.0" layoutY="138.0" text="Ingredients " AnchorPane.rightAnchor="449.0" AnchorPane.topAnchor="138.0">
+               <font>
+                  <Font name="Forte" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="l2" layoutX="15.0" layoutY="305.0" text="Description" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Forte" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="modifR" layoutX="944.0" layoutY="20.0" mnemonicParsing="false" onAction="#modifR" style="-fx-background-color: lightgrey;" text="Modifier" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="suppR" layoutX="849.0" layoutY="20.0" mnemonicParsing="false" onAction="#suppR" style="-fx-background-color: lightgrey;" text="Supprimer" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="labcl" layoutX="25.0" layoutY="6.0" prefHeight="25.0" prefWidth="244.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="317.0" layoutY="24.0" text="Search :">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sF" layoutX="378.0" layoutY="20.0" prefHeight="25.0" prefWidth="302.0" />
+      <Button fx:id="ajouR" layoutX="47.0" layoutY="20.0" mnemonicParsing="false" onAction="#ajouR" style="-fx-background-color: lightgrey;" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

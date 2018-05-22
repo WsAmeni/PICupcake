@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReclamationController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1400.0" opacity="0.76" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Pattern-White-Sand-background-patterns-pattern-wallpapers-1600x1200.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="413.0" layoutY="28.0" prefHeight="645.0" prefWidth="575.0" style="-fx-background-color: transparent;">
+         <children>
+            <Label layoutX="90.0" layoutY="157.0" prefHeight="18.0" prefWidth="81.0" text="Nom" />
+            <Label layoutX="90.0" layoutY="200.0" text="Patisserie" />
+            <Label layoutX="90.0" layoutY="344.0" text="Reclamation" />
+            <Label layoutX="90.0" layoutY="245.0" prefHeight="17.0" prefWidth="50.0" text="Date" />
+            <TextField fx:id="CC" editable="false" layoutX="226.0" layoutY="152.0" prefHeight="28.0" prefWidth="225.0" />
+            <TextField fx:id="reclmationtxt" alignment="TOP_LEFT" layoutX="229.0" layoutY="291.0" prefHeight="163.0" prefWidth="225.0" promptText="Tapez votre reclamation içi" />
+            <Button fx:id="btnReclamer" layoutX="175.0" layoutY="493.0" mnemonicParsing="false" onAction="#Reclamer" prefHeight="56.0" prefWidth="225.0" text="Reclamer" />
+            <Label fx:id="titlM" layoutX="140.0" layoutY="44.0" prefHeight="56.0" prefWidth="296.0" text="Veuillez saisir vos donées" textFill="#e15074">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Date" disable="true" editable="false" layoutX="229.0" layoutY="240.0" prefHeight="28.0" prefWidth="225.0" />
+            <ComboBox fx:id="CP" layoutX="229.0" layoutY="196.0" prefHeight="25.0" prefWidth="225.0" promptText="Patisserie" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

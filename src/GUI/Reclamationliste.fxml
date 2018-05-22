@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="892.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReclamationlisteController">
+   <children>
+      <Label fx:id="lab1" layoutX="14.0" layoutY="3.0" prefHeight="50.0" prefWidth="350.0" text="Liste des Reclamations" textFill="#cd3869">
+         <font>
+            <Font name="Forte" size="33.0" />
+         </font>
+      </Label>
+      <SplitPane fx:id="spp" dividerPositions="0.5609157808667212" layoutY="50.0" prefHeight="596.0" prefWidth="1215.0">
+        <items>
+          <AnchorPane fx:id="ap1" minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="251.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="lab2" layoutX="116.0" layoutY="58.0" text="Rechercher un client :" textFill="#274a8a">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtc" layoutX="300.0" layoutY="56.0" prefHeight="31.0" prefWidth="245.0" promptText="Nom du Client" />
+                  <TableView fx:id="TableReclamation" layoutX="86.0" layoutY="182.0" prefHeight="266.0" prefWidth="530.0" stylesheets="@../css/Metro-UI.css">
+                     <columns>
+                        <TableColumn fx:id="CC" prefWidth="268.0" text="Client" />
+                        <TableColumn fx:id="CP" prefWidth="257.0" text="Patisserie" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="ap2" minHeight="0.0" minWidth="0.0" prefHeight="592.0" prefWidth="506.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridC" layoutX="44.0" layoutY="69.0" prefHeight="240.0" prefWidth="410.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.80001220703124" minWidth="10.0" prefWidth="133.6" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.4" minWidth="10.0" prefWidth="198.4" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nom client" textAlignment="CENTER" textFill="#271f97">
+                           <font>
+                              <Font name="Algerian" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Prenom client" textAlignment="CENTER" textFill="#271f97" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Algerian" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Patisserie" textAlignment="CENTER" textFill="#271f97" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Algerian" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="16.0" prefWidth="148.0" text="Date Reclamation" textAlignment="CENTER" textFill="#271f97" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Algerian" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Reclamation" textAlignment="CENTER" textFill="#271f97" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Algerian" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nomc" prefHeight="29.0" prefWidth="198.0" GridPane.columnIndex="1" />
+                        <Label fx:id="prenomc" prefHeight="29.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="nomp" prefHeight="25.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="Datec" prefHeight="27.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="reclamationc" prefHeight="67.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="info" layoutX="96.0" layoutY="14.0" prefHeight="31.0" prefWidth="306.0" text="Informations sur la reclamation" textFill="#274a8a">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="envmail" layoutX="210.0" layoutY="480.0" mnemonicParsing="false" text="Notifier Patisserie" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

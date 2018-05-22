@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ValiderPanierController">
+   <children>
+      <TableView fx:id="t" layoutX="52.0" layoutY="92.0" onMouseClicked="#showOnClick" prefHeight="504.0" prefWidth="895.0">
+        <columns>
+          <TableColumn fx:id="lib" prefWidth="197.0" text="libellé" />
+          <TableColumn fx:id="desc" prefWidth="255.00001525878906" text="description" />
+            <TableColumn fx:id="prix" prefWidth="148.0" text="prix (Dt)" />
+            <TableColumn fx:id="pat" prefWidth="136.0" text="Patisserie" />
+            <TableColumn fx:id="quantité" prefWidth="158.0" text="quantité" />
+        </columns>
+      </TableView>
+      <Label layoutX="1059.0" layoutY="92.0" prefHeight="37.0" prefWidth="149.0" text="Montant Total : " textFill="#750108">
+         <font>
+            <Font name="Gabriola" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="payer" layoutX="1082.0" layoutY="532.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" text="Payer">
+         <font>
+            <Font name="Georgia" size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="totat" layoutX="1041.0" layoutY="160.0" prefHeight="25.0" prefWidth="82.0">
+         <font>
+            <Font name="Gabriola" size="17.0" />
+         </font></Label>
+      <Button layoutX="1066.0" layoutY="358.0" mnemonicParsing="false" onAction="#PDF" prefHeight="33.0" prefWidth="136.0" text="Génerer en PDF">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Label layoutX="1007.0" layoutY="404.0" prefHeight="33.0" prefWidth="254.0" text="Envoyer un mail à une patisserie:" textFill="#750108">
+         <font>
+            <Font name="Gabriola" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="envoyer" layoutX="1085.0" layoutY="452.0" mnemonicParsing="false" onAction="#Mail" prefHeight="33.0" prefWidth="92.0" text="Envoyer">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <Label layoutX="1003.0" layoutY="308.0" prefHeight="30.0" prefWidth="246.0" text="Génerer ma commande en PDF:" textFill="#750108">
+         <font>
+            <Font name="Gabriola" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="1041.0" layoutY="160.0" mnemonicParsing="false" onAction="#Total" prefHeight="25.0" prefWidth="69.0" text="Calculer">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label layoutX="1007.0" layoutY="199.0" prefHeight="25.0" prefWidth="254.0" text="Réduction avec points fidèlités :" textFill="#750108">
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="1041.0" layoutY="260.0" mnemonicParsing="false" onAction="#Fid" prefHeight="25.0" prefWidth="69.0" text="Calculer">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label fx:id="totat" layoutX="1136.0" layoutY="158.0" prefHeight="30.0" prefWidth="82.0" />
+      <AnchorPane layoutX="74.0" layoutY="19.0" prefHeight="41.0" prefWidth="274.0" style="-fx-border-width: 2;">
+         <children>
+            <Label layoutX="18.0" layoutY="3.0" prefHeight="25.0" prefWidth="254.0" text="Valider ma commande" textFill="#e15074">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

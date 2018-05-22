@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 24, 2018, 9:36:27 PM
+    Author     : user16
+*/
+
+.table-view {
+    -fx-table-header-border-color: transparent;
+    -fx-control-inner-background: white;
+    -fx-background-color:transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+     -fx-size: 16;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+.table-view:focused {
+    -fx-background-color:rosybrown;
+}
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1, 2;
+      -fx-font-size: 17;
+}
+.table-row-cell:focused {
+    -fx-background-color: rosybrown;
+    -fx-background-insets: 0, 1, 2;
+   -fx-font-size: 17;
+    -fx-font-color: black;
+
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+.table-row-cell:filled {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: rosybrown;
+    -fx-font-size: 17;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;    
+    -fx-size: 35;
+    -fx-border-color: transparent;
+    -fx-border-insets: -1 0 0 -1;
+    -fx-padding: 0 5 0 0;
+}

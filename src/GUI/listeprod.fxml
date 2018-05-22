@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListeprodController">
+   <children>
+      <TableView fx:id="id_TV" layoutX="372.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#showOnClick" prefHeight="600.0" prefWidth="510.0">
+        <columns>
+          
+          <TableColumn fx:id="T_lib" prefWidth="113.0" text="Libellé" />
+            <TableColumn fx:id="T_desc" prefWidth="153.0" text="Description" />
+            <TableColumn fx:id="T_prix" prefWidth="66.0" text="Prix" />
+            <TableColumn fx:id="T_disp" prefWidth="91.0" text="Quantité" />
+            <TableColumn fx:id="T_type" prefWidth="86.0" text="Réduction(%)" />
+        </columns>
+      </TableView>
+      <Label fx:id="id_libellé" layoutX="56.0" layoutY="112.0" text="Libellé" />
+      <Label fx:id="id_desc" layoutX="45.0" layoutY="190.0" text="Description" />
+      <Label fx:id="id_prix1" layoutX="63.0" layoutY="279.0" text="Prix" />
+      <Label fx:id="dispo" layoutX="50.0" layoutY="330.0" text="Quantité" />
+      <Label fx:id="id_type1" layoutX="42.0" layoutY="378.0" text="Réduction" />
+      <TextField fx:id="id_lsaisie" layoutX="173.0" layoutY="108.0" />
+      <TextField fx:id="id_desctext" layoutX="173.0" layoutY="151.0" prefHeight="99.0" prefWidth="149.0" />
+      <TextField fx:id="id_prixtext" layoutX="172.0" layoutY="275.0" />
+      <Button fx:id="id_btnaj" layoutX="222.0" layoutY="561.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button fx:id="id_save" layoutX="287.0" layoutY="561.0" mnemonicParsing="false" onAction="#Enregistrer" text="Enregistrer" />
+      <Button fx:id="supp" layoutX="139.0" layoutY="561.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <ImageView fx:id="imageview" fitHeight="122.0" fitWidth="188.0" layoutX="162.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnBrowse" layoutX="34.0" layoutY="480.0" mnemonicParsing="false" onAction="#chooseFile" text="Ouvrir" />
+      <Label fx:id="fileSelected" layoutX="20.0" layoutY="541.0" text="" />
+      <Label layoutX="12.0" layoutY="32.0" text="Rechercher" />
+      <TextField fx:id="search" layoutX="83.0" layoutY="28.0" onInputMethodTextChanged="#search" onKeyReleased="#search" />
+      <TextField fx:id="quant" layoutX="173.0" layoutY="326.0" />
+      <TextField fx:id="reduc" layoutX="173.0" layoutY="374.0" />
+   </children>
+</AnchorPane>
