@@ -64,7 +64,11 @@ public class ReclamationCListeController implements Initializable {
     private Label reclamationc;
     @FXML
     private Label info;
-
+    @FXML
+    private Label Etat;
+    @FXML
+    private Label etatc;
+    String s ;
     /**
      * Initializes the controller class.
      */
@@ -97,7 +101,17 @@ public class ReclamationCListeController implements Initializable {
                 reclamationc.setText(Reclamations
                         .get(TableReclamation.getSelectionModel().getSelectedIndex())
                         .getContent());
-
+                s =(String.valueOf(Reclamations
+                        .get(TableReclamation.getSelectionModel().getSelectedIndex())
+                        .getStatus()));
+                if (s.equals("0"))
+                {
+                    etatc.setText("En cours de traitement");
+                }
+                else
+                {
+                    etatc.setText("Reclamation traitée!\nVérifier votre mail");
+                }
             });
         } catch (SQLException ex) {
             Logger.getLogger(ReclamationlisteController.class.getName()).log(Level.SEVERE, null, ex);

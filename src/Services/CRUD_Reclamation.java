@@ -64,14 +64,14 @@ public class CRUD_Reclamation {
     public List<Reclamation> displayAllFeedBackP1(int idr) throws SQLException {
         String requete = "SELECT * FROM reclamation \n"
                 + "INNER JOIN client ON reclamation.id_client = client.id \n"
-                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id \n"
+                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id_patisserie \n"
                 + "WHERE reclamation.id_client =" + idr;
 
         ste = con.createStatement();
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.Nom")), rs.getString("content"), rs.getInt("status"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id_patisserie"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.Nom")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;
@@ -80,13 +80,13 @@ public class CRUD_Reclamation {
     public List<Reclamation> displayAllReclamtion() throws SQLException {
         String requete = "SELECT * FROM reclamation \n"
                 + "INNER JOIN client ON reclamation.id_client = client.id \n"
-                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id";
+                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id_patisserie";
 
         ste = con.createStatement();
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom"), rs.getString("patisserie.email")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom"), rs.getString("client.email")), rs.getString("content"), rs.getInt("status"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id_patisserie"), rs.getString("patisserie.nom"), rs.getString("patisserie.email")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom"), rs.getString("client.email")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;
@@ -94,14 +94,14 @@ public class CRUD_Reclamation {
     public List<Reclamation> displayAllReclamtionC(int id) throws SQLException {
         String requete = "SELECT * FROM reclamation \n"
                 + "INNER JOIN client ON reclamation.id_client = client.id \n"
-                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id \n" +
+                + "INNER JOIN patisserie ON reclamation.id_patisserie = patisserie.id_patisserie \n" +
                         "WHERE reclamation.id_client = "+id;
 
         ste = con.createStatement();
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom")), rs.getString("content"), rs.getInt("status"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id_patisserie"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;

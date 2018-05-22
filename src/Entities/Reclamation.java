@@ -14,6 +14,7 @@ import java.util.Objects;
  * @author jihed
  */
 public class Reclamation {
+
     private int id_rec;
     private Client client;
     private Patisserie patisserie;
@@ -31,31 +32,35 @@ public class Reclamation {
     public Reclamation(int id_patisserie) {
         this.id_patisserie = id_patisserie;
     }
-    public Reclamation(String Date,Patisserie patisserie,Client client,String content) {
+
+    public Reclamation(String Date, Patisserie patisserie, Client client, String content) {
         this.Date = Date;
         this.client = client;
         this.patisserie = patisserie;
         this.content = content;
     }
-    public Reclamation(int id_client, Patisserie patisserie,String content,String Date) {
+
+    public Reclamation(int id_client, Patisserie patisserie, String content, String Date) {
         this.content = content;
         this.id_client = id_client;
         this.patisserie = patisserie;
         this.Date = Date;
     }
-    public Reclamation(int id_client, int id_patisserie,String content) {
+
+    public Reclamation(int id_client, int id_patisserie, String content) {
         this.content = content;
         this.id_client = id_client;
         this.id_patisserie = id_patisserie;
     }
-    public Reclamation(int id_client, int id_patisserie , String content,String Date) {
+
+    public Reclamation(int id_client, int id_patisserie, String content, String Date) {
         this.id_client = id_client;
         this.id_patisserie = id_patisserie;
         this.Date = Date;
         this.content = content;
     }
-    
-    public Reclamation(Client client, Patisserie patisserie , String content,String Date) {
+
+    public Reclamation(Client client, Patisserie patisserie, String content, String Date) {
         this.client = client;
         this.patisserie = patisserie;
         this.Date = Date;
@@ -78,10 +83,14 @@ public class Reclamation {
         this.status = status;
     }
 
-    public Reclamation(String string, Patisserie patisserie, Client client, String string0, int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Reclamation(String string, Patisserie patisserie, Client client, String content, int status) {
+        this.id_rec = id_rec;
+        this.client = client;
+        this.patisserie = patisserie;
+        this.content = content;
+        this.status = status;
     }
-    
+
     public int getStatus() {
         return status;
     }
@@ -89,7 +98,7 @@ public class Reclamation {
     public void setStatus(int status) {
         this.status = status;
     }
-    
+
     public int getId_client() {
         return id_client;
     }
@@ -191,6 +200,5 @@ public class Reclamation {
     public String toString() {
         return "Reclamation{" + "id_rec=" + id_rec + ", client=" + client + ", patisserie=" + patisserie + ", date_rec=" + Date + ", content=" + content + '}';
     }
-    
-    
+
 }
