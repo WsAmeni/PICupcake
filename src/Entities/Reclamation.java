@@ -23,6 +23,7 @@ public class Reclamation {
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     LocalDate localDate = LocalDate.now();
     private String Date = dtf.format(localDate);
+    private int status;
 
     public Reclamation() {
     }
@@ -69,6 +70,26 @@ public class Reclamation {
         this.content = content;
     }
 
+    public Reclamation(int id_rec, Client client, Patisserie patisserie, String content, int status) {
+        this.id_rec = id_rec;
+        this.client = client;
+        this.patisserie = patisserie;
+        this.content = content;
+        this.status = status;
+    }
+
+    public Reclamation(String string, Patisserie patisserie, Client client, String string0, int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+    
     public int getId_client() {
         return id_client;
     }

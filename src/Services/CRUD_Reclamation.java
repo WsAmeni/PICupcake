@@ -37,12 +37,13 @@ public class CRUD_Reclamation {
     }
 
     public void insertReclamation(Reclamation r) throws SQLException { //PreparedStatement
-        String requete = "insert into reclamation (id_client,id_patisserie,content,date_rec) values (?,?,?,?)";
+        String requete = "insert into reclamation (id_client,id_patisserie,content,date_rec,status) values (?,?,?,?,?)";
         pste = con.prepareStatement(requete);
         pste.setInt(1, r.getId_client());
         pste.setInt(2, r.getId_patisserie());
         pste.setString(3, r.getContent());
         pste.setString(4, r.getDate());
+        pste.setInt(5,0);
         pste.executeUpdate();
     }
 
@@ -70,7 +71,7 @@ public class CRUD_Reclamation {
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.Nom")), rs.getString("content"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.Nom")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;
@@ -85,7 +86,7 @@ public class CRUD_Reclamation {
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom"), rs.getString("patisserie.email")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom"), rs.getString("client.email")), rs.getString("content"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom"), rs.getString("patisserie.email")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom"), rs.getString("client.email")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;
@@ -100,7 +101,7 @@ public class CRUD_Reclamation {
         rs = ste.executeQuery(requete);
         List<Reclamation> list = new ArrayList<>();
         while (rs.next()) {
-            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom")), rs.getString("content"));
+            Reclamation r = new Reclamation(rs.getString("date_rec"), new Patisserie(rs.getInt("patisserie.id"), rs.getString("patisserie.nom")), new Client(rs.getInt("client.id"), rs.getString("client.nom"), rs.getString("client.prenom")), rs.getString("content"), rs.getInt("status"));
             list.add(r);
         }
         return list;

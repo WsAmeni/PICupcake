@@ -81,7 +81,7 @@ public class ReclamationController implements Initializable {
     }
 
     public static boolean isValide(String text) {
-        if (text.matches("^[a-zA-Z ]+$")) {
+        if (text.matches("^[a-zA-Z0-9 ]+$")) {
             return true;
         } else {
             return false;
